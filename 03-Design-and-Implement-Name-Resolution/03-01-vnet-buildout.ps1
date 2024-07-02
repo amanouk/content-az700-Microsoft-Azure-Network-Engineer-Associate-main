@@ -1,8 +1,8 @@
 ###############################
 ####### SCRIPT DETAILS ########
-# Intended Purpose: Setup environment for ACG Azure Cloud Sandbox
-# Disclaimer: This script is intended to be used only in the ACG Azure Cloud Playground/Sandbox
-# Message: To use this script for non-ACG Azure Cloud Sandbox environments
+# Intended Purpose: Setup environment for Azure Cloud 
+# Disclaimer: This script is intended to be used only in an Azure Cloud Training Lab
+# Message: To use this script for other Azure Cloud Sandbox environments
 #       1.) Create your own resource group variable.
 #       2.) Comment out variable in variables section.
 #       3.) Uncomment below commands and assign your own resource group and location.
