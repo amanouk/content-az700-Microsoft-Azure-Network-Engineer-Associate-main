@@ -1,8 +1,8 @@
 ###############################
 ####### SCRIPT DETAILS ########
-# Intended Purpose: Setup environment for ACG Azure Cloud Sandbox
-# Disclaimer: This script is intended to be used only in the ACG Azure Cloud Playground/Sandbox
-# Message: To use this script for non-ACG Azure Cloud Sandbox environments
+# Intended Purpose: Setup environment for Azure Cloud 
+# Disclaimer: This script is intended to be used only in an Azure Cloud Training Lab
+# Message: To use this script for other Azure Cloud Sandbox environments
 #       1.) Create your own resource group variable.
 #       2.) Comment out variable in variables section.
 #       3.) Uncomment below commands and assign your own resource group and location.
@@ -14,8 +14,11 @@
 ##### START - VARIABLES ######
 ##############################
 
+# Create a Resource Group 
+az group create --name brandrg --location eastus
+
 # Get resource group and set to variable $rg
-$rg = az group list --query '[].name' -o tsv
+$rg = "brandrg"
 
 # Assign location variable to playground resource group location
 $location = az group list --query '[].location' -o tsv
@@ -31,7 +34,7 @@ $location = az group list --query '[].location' -o tsv
 
 # Create Virtual Network and subnet
 
-az network vnet create --name cake-hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name nva-subnet --subnet-prefix 10.0.1.0/24
+az network vnet create --name brand-hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name nva-subnet --subnet-prefix 10.0.1.0/24
 
 az network vnet subnet create --name hub-subnet-01 --resource-group $rg --vnet-name cake-hub-vnet --address-prefixes 10.0.2.0/24 
 
