@@ -36,13 +36,13 @@ $location = az group list --query '[].location' -o tsv
 
 az network vnet create --name brand-hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name nva-subnet --subnet-prefix 10.0.1.0/24
 
-az network vnet subnet create --name hub-subnet-01 --resource-group $rg --vnet-name cake-hub-vnet --address-prefixes 10.0.2.0/24 
+az network vnet subnet create --name hub-subnet-01 --resource-group $rg --vnet-name brand-hub-vnet --address-prefixes 10.0.2.0/24 
 
 # Create three Linux machines. We will not need to interact with the machines,
 # One will act as our virtual appliance in the NVA subnet, the other two will be in the subnet
 # associated with our route table
 
-az vm create --resource-group $rg --name vm-1 --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-vm1 --public-ip-sku Standard --vnet-name brande-hub-vnet --subnet hub-subnet-01 --size Standard_B1s --no-wait
+az vm create --resource-group $rg --name vm-1 --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-vm1 --public-ip-sku Standard --vnet-name brand-hub-vnet --subnet hub-subnet-01 --size Standard_B1s --no-wait
 
 az vm create --resource-group $rg --name vm-2 --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-vm2 --public-ip-sku Standard --vnet-name brand-hub-vnet --subnet hub-subnet-01 --size Standard_B1s --no-wait
 
