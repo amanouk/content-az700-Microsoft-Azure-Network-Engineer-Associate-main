@@ -1,8 +1,8 @@
 ###############################
 ####### SCRIPT DETAILS ########
-# Intended Purpose: Setup environment for ACG Azure Cloud Sandbox
-# Disclaimer: This script is intended to be used only in the ACG Azure Cloud Playground/Sandbox
-# Message: To use this script for non-ACG Azure Cloud Sandbox environments
+# Intended Purpose: Setup environment for Azure Cloud 
+# Disclaimer: This script is intended to be used only in an Azure Cloud Training Lab
+# Message: To use this script for other Azure Cloud Sandbox environments
 #       1.) Create your own resource group variable.
 #       2.) Comment out variable in variables section.
 #       3.) Uncomment below commands and assign your own resource group and location.
@@ -14,12 +14,14 @@
 ##### START - VARIABLES ######
 ##############################
 
+# Create a Resource Group 
+az group create --name brandrg --location eastus
+
 # Get resource group and set to variable $rg
-$rg = az group list --query '[].name' -o tsv
+$rg = "brandrg"
 
 # Assign location variable to playground resource group location
 $location = az group list --query '[].location' -o tsv
-
 ##############################
 ##### END - VARIABLES ######
 ##############################
@@ -31,19 +33,19 @@ $location = az group list --query '[].location' -o tsv
 
 # Create Virtual Networks and subnets
 
-az network vnet create --name cake-hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name nva-subnet --subnet-prefix 10.0.1.0/24
+az network vnet create --name brand-hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name nva-subnet --subnet-prefix 10.0.1.0/24
 
-az network vnet create --name cake-spoke1-vnet --resource-group $rg --location $location --address-prefixes 10.1.0.0/16 --subnet-name spoke-1-subnet-a --subnet-prefix 10.1.1.0/24
+az network vnet create --name brand-spoke1-vnet --resource-group $rg --location $location --address-prefixes 10.1.0.0/16 --subnet-name spoke-1-subnet-a --subnet-prefix 10.1.1.0/24
 
-az network vnet create --name cake-spoke2-vnet --resource-group $rg --location $location --address-prefixes 10.2.0.0/16 --subnet-name spoke-2-subnet-a --subnet-prefix 10.2.1.0/24
+az network vnet create --name brand-spoke2-vnet --resource-group $rg --location $location --address-prefixes 10.2.0.0/16 --subnet-name spoke-2-subnet-a --subnet-prefix 10.2.1.0/24
 
 # Create three Linux machines. One in each network
 
-az vm create --resource-group $rg --name spoke-1-vm --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-spoke-1-vm --public-ip-sku Standard --vnet-name cake-spoke1-vnet --subnet spoke-1-subnet-a --size Standard_B1s --no-wait
+az vm create --resource-group $rg --name spoke-1-vm --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-spoke-1-vm --public-ip-sku Standard --vnet-name brand-spoke1-vnet --subnet spoke-1-subnet-a --size Standard_B1s --no-wait
 
-az vm create --resource-group $rg --name spoke-2-vm --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-spoke-2-vm --public-ip-sku Standard --vnet-name cake-spoke2-vnet --subnet spoke-2-subnet-a --size Standard_B1s --no-wait
+az vm create --resource-group $rg --name spoke-2-vm --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-spoke-2-vm --public-ip-sku Standard --vnet-name brand-spoke2-vnet --subnet spoke-2-subnet-a --size Standard_B1s --no-wait
 
-az vm create --resource-group $rg --name hub-nva-vm --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-nva --public-ip-sku Standard --vnet-name cake-hub-vnet --subnet nva-subnet --size Standard_B1s
+az vm create --resource-group $rg --name hub-nva-vm --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-nva --public-ip-sku Standard --vnet-name brand-hub-vnet --subnet nva-subnet --size Standard_B1s
 
 # Update the NVA VM to enable IP forwarding. This needs to be enabled on both the VM NIC and within the OS
 # via extension.
