@@ -1,5 +1,5 @@
-$HubVnet = Get-AzVirtualNetwork -Name "cake-hub-vnet"
-$Spoke2Vnet = Get-AzVirtualNetwork -Name "cake-spoke2-vnet"
+$HubVnet = Get-AzVirtualNetwork -Name "brand-hub-vnet"
+$Spoke2Vnet = Get-AzVirtualNetwork -Name "brand-spoke2-vnet"
 
 Add-AzVirtualNetworkPeering -Name 'hub-spoke2' `
     -VirtualNetwork $HubVnet `
