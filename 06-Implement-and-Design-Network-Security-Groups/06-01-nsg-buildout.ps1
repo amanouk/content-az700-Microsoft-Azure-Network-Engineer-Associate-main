@@ -67,7 +67,7 @@ $nic | Set-AzNetworkInterface
 Remove-AzNetworkSecurityGroup -Name $nsgName -ResourceGroupName $rg -Force
 
 ## PRINT OUT VM PUBLIC IP FOR STUDENTS TO USE
-$pip = az vm list-ip-addresses --resource-group $rg --name brand-hub-nva-vm --query "[].virtualMachine.network.publicIpAddresses[0].ipAddress" --output tsv
+$pip = az vm list-ip-addresses --resource-group brandrg --name brand-hub-vm-01 --query "[].virtualMachine.network.publicIpAddresses[0].ipAddress" --output tsv
 echo "==============================================================="
 echo "The public IP address of the VM is: $pip"
 echo "==============================================================="
