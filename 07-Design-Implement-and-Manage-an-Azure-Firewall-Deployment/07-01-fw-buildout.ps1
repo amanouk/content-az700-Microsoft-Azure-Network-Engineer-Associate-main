@@ -106,8 +106,8 @@ az network vnet peering create --resource-group $rg --name spoke1-to-hub-peering
 
 ## CREATE FIREWALL RESOURCES
 
-# Install extensions without prompt
-$global:setConfig = az config set extension.use_dymanic_install=yes_without_prompt # may work if not already installed - otherwise perform as pre-step before running script
+# Install extensions without prompt, may work if not already installed - otherwise perform as pre-step before running script
+$global:setConfig = az config set extension.use_dymanic_install=yes_without_prompt 
 $global:setConfig
 
 # Create AzureFirewallSubnet for spoke2-vnet
