@@ -1,18 +1,8 @@
-$HubVnet = Get-AzVirtualNetwork -Name "brand-hub-vnet"
-$Spoke2Vnet = Get-AzVirtualNetwork -Name "brand-spoke2-vnet"
+$HubVnet = Get-AzVirtualNetwork -Name "hub-vnet"
+$Spoke1Vnet = Get-AzVirtualNetwork -Name "spoke1-vnet"
 
-Add-AzVirtualNetworkPeering -Name 'hub-spoke2' `
+Add-AzVirtualNetworkPeering -Name 'hub-spoke1' `
     -VirtualNetwork $HubVnet `
-    -RemoteVirtualNetworkId $Spoke2Vnet.Id `
+    -RemoteVirtualNetworkId $Spoke1Vnet.Id `
     -AllowForwardedTraffic `
     -AllowGatewayTransit
-
-# Note: the spoke2-hub peering will fail because the hub network does not have a gateway to peer to.
-# We are leaving the command as is for learning purposes, 
-# however you will need to remove the 'UseRemoteGateways' option to successfully run it.
-
-Add-AzVirtualNetworkPeering -Name 'spoke2-hub' `
-    -VirtualNetwork $Spoke2Vnet `
-    -RemoteVirtualNetworkId $HubVnet.Id `
-    -AllowForwardedTraffic `
-    -UseRemoteGateways
