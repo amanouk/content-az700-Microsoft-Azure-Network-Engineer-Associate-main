@@ -26,17 +26,17 @@
   "variables": {
     "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'),'cloud-init.txt'))]",
     "rg": "[resourceGroup().location]",
-    "hubVNetName": "cake-hub-vnet-01",
+    "hubVNetName": "brand-hub-vnet-01",
     "hubMainSubnetName": "hub-subnet-01",
     "hubBastionSubnetName": "AzureBastionSubnet",
     "hubVNetAddressPrefix": "10.60.0.0/16",
     "hubSubnetAddressPrefix": "10.60.0.0/24",
     "hubBastionSubnetAddressPrefix": "10.60.1.0/26",
-    "nsgName": "cake-hub-nsg-01",
-    "vmName": "cake-hub-vm-",
+    "nsgName": "brand-hub-nsg-01",
+    "vmName": "brand-hub-vm-",
     "vmSize": "standard_b2s",
     "vmCount": 2,
-    "bastionName": "cake-hub-bastion"
+    "bastionName": "brand-hub-bastion"
   },
   "resources": [
     {
