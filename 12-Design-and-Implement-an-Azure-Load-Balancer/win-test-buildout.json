@@ -30,7 +30,7 @@
   },
   "functions": [],
   "variables": {
-    "customData": "",
+    "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'), concat('cloud-init.txt', parameters('_artifactsLocationSasToken'))))]",
     "hubLbRegion": "eastus2",
     "spokeLbRegion": "westus",
     "hubVNetName": "brand-hub-vnet-01",
