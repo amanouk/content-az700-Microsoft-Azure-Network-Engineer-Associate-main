@@ -8,9 +8,6 @@ az group create --name brandrg --location eastus
 # Get resource group and set to variable $rg
 $rg = "brandrg"
 
-# Assign location variable to playground resource group location
-$location = az group list --query '[].location' -o tsv
-
 az deployment group create --resource-group $rg --template-file ./setup.json
 
 #Run 12-01-iis-installation.ps1 for each vm to configure IIS
