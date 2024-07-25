@@ -13,3 +13,8 @@ $location = az group list --query '[].location' -o tsv
 
 az deployment group create --resource-group $rg --template-file ./setup.json
 
+# Run 12-02-iis-installation.ps1 to deploy IIS on two VMs
+
+curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/12-Design-and-Implement-an-Azure-Load-Balancer/12-02-iis-installation.ps1 -o setup.ps1
+
+. ./setup.ps1
