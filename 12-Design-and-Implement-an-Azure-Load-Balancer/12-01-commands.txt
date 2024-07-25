@@ -1,6 +1,6 @@
 # These commands will be used to setup demos and pull down scripts from GitHub - Copy/Paste the below commands into Cloud Shell PowerShell Environment
 
-curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/12-Design-and-Implement-an-Azure-Load-Balancer/12-01-load-balancer-demo-buildout.json -o setup.json
+curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/12-Design-and-Implement-an-Azure-Load-Balancer/12-01-load-balancer-demo-buildout-win.json -o setup.json
 
 # Create a Resource Group 
 az group create --name brandrg --location eastus
@@ -13,3 +13,7 @@ $location = az group list --query '[].location' -o tsv
 
 az deployment group create --resource-group $rg --template-file ./setup.json
 
+#Run 12-01-iis-installation.ps1 for each vm to configure IIS
+curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/12-Design-and-Implement-an-Azure-Load-Balancer/12-01-iis-installation.ps1.json -o setup.ps1
+
+. ./setup.ps1
