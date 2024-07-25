@@ -6,8 +6,8 @@ Select setup.json.
 
 In the setup.json file, change:
 
-"appServicePlanName": "brand-hub-web-app-plan",
-"webAppPortalName": "brand-hub-web-app",
+"appServicePlanName": "brand-hub-web-app-plan", (line 35)
+"webAppPortalName": "brand-hub-web-app",  (line 36)
 
 To be:
 
