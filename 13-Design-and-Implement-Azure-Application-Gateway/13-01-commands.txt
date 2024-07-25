@@ -16,6 +16,9 @@ To be:
 
 Save the file by clicking in the space below the Cloud Shell editor's X icon on the right and choose `Save`.  You can then click in the space below the Cloud Shell editor's X icon on the right and choose `Close editor`.
 
+# Create a Resource Group 
+az group create --name brandrg --location eastus
+
 #You can then run:
 $rg = "brandrg"
 
