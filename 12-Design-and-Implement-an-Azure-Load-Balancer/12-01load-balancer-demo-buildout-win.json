@@ -16,7 +16,7 @@
     },
     "_artifactsLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/mrcloudchase/Azure/master/",
+      "defaultValue": "https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master",
       "metadata": {
         "description": "Artifacts Location"
       }
@@ -26,17 +26,17 @@
   "variables": {
     "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'),'cloud-init.txt'))]",
     "rg": "[resourceGroup().location]",
-    "hubVNetName": "brand-hub-vnet-01",
+    "hubVNetName": "hub-vnet-01",
     "hubMainSubnetName": "hub-subnet-01",
     "hubBastionSubnetName": "AzureBastionSubnet",
     "hubVNetAddressPrefix": "10.60.0.0/16",
     "hubSubnetAddressPrefix": "10.60.0.0/24",
     "hubBastionSubnetAddressPrefix": "10.60.1.0/26",
-    "nsgName": "brand-hub-nsg-01",
-    "vmName": "brand-hub-vm-",
+    "nsgName": "hub-nsg-01",
+    "vmName": "hub-vm-",
     "vmSize": "standard_b2s",
     "vmCount": 2,
-    "bastionName": "brand-hub-bastion"
+    "bastionName": "hub-bastion"
   },
   "resources": [
     {
@@ -161,9 +161,9 @@
         },
         "storageProfile": {
           "imageReference": {
-            "publisher": "Canonical",
-            "offer": "UbuntuServer",
-            "sku": "18.04-LTS",
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2019-Datacenter",
             "version": "latest"
           },
           "osDisk": {
