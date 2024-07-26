@@ -32,8 +32,8 @@
   "variables": {
     "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'), concat('cloud-init.txt', parameters('_artifactsLocationSasToken'))))]",
     "location": "[resourceGroup().location]",
-    "appServicePlanName": "brand-hub-web-app-plan",
-    "webAppPortalName": "brand-hub-web-app",
+    "appServicePlanName": "hub-web-app-plan",
+    "webAppPortalName": "hub-web-app",
     "linuxFxVersion": "php|7.4",
     "appServicePlanSku": "S1",
     "hubVNetName": "brand-hub-vnet-01",
