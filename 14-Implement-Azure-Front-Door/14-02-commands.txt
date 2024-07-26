@@ -2,7 +2,9 @@
 
 curl https://raw.githubusercontent.com/linuxacademy/content-az700-Microsoft-Azure-Network-Engineer-Associate/main/14-Implement-Azure-Front-Door/14-02-fd-custom-domain-deploy.json -o setup.json
 
-$rg = az group list --query '[].name' -o tsv
+# Create a Resource Group
+az group create --name brandrg --location eastus
+
+$rg = "brandrg"
 
 az deployment group create --resource-group $rg --template-file ./setup.json
-
