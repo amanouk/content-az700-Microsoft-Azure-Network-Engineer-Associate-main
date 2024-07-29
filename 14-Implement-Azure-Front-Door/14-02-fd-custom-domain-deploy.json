@@ -16,7 +16,7 @@
     },
     "_artifactsLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/mrcloudchase/Azure/master/",
+      "defaultValue": "https://raw.githubusercontent.com/mrbrandfd/Azure/master/",
       "metadata": {
         "description": "Artifacts Location"
       }
@@ -62,7 +62,7 @@
     "fdOriginGroupName": "defaultorigingroup",
     "fdHubOriginName": "huborigin",
     "fdSpokeOriginName": "spokeorigin",
-    "fdEndpointName": "cloudchase",
+    "fdEndpointName": "brandfd",
     "fdRouteName": "defaultroute"
   },
   "resources": [
@@ -830,7 +830,7 @@
             "apiVersion": "2021-06-01",
             "name": "[format('{0}/{1}/{2}', variables('fdName'), variables('fdEndpointName'), variables('fdRouteName'))]",
             "dependsOn": [
-                "[resourceId('Microsoft.Cdn/profiles/afdendpoints', variables('fdName'), 'cloudchase')]",
+                "[resourceId('Microsoft.Cdn/profiles/afdendpoints', variables('fdName'), 'brandfd')]",
                 "[resourceId('Microsoft.Cdn/profiles', variables('fdName'))]",
                 "[resourceId('Microsoft.Cdn/profiles/originGroups', variables('fdName'), 'defaultorigingroup')]"
             ],
