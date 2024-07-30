@@ -6,9 +6,9 @@
     "variables": {
       "location": "[resourceGroup().location]",
       "hubAppServicePlanName": "hub-web-app-plan",
-      "hubAppPortalName": "[toLower(concat(substring(uniqueString(resourceGroup().id), 0, 4), '-hub-web-app'))]",
+      "hubAppPortalName": "hub-web-app-",
       "spokeAppServicePlanName": "spoke-web-app-plan",
-      "spokeAppPortalName": "[toLower(concat(substring(uniqueString(resourceGroup().id), 0, 4), '-spoke-web-app'))]",
+      "spokeAppPortalName": "spoke-web-app-",
       "appServicePlanSku": "S1",
       "hubVNetName": "hub-vnet-01",
       "hubMainSubnetName": "hub-subnet-01",
