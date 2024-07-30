@@ -2,7 +2,11 @@
 
 curl https://raw.githubusercontent.com/linuxacademy/content-az700-Microsoft-Azure-Network-Engineer-Associate/main/15-Implement-an-Azure-Traffic-Manager-Profile/15-01-Traffic-Manager-Demo-Buildout.json -o setup.json
 
-$rg = az group list --query '[].name' -o tsv
+# Create a Resource Group 
+az group create --name brandrg --location eastus
+
+#You can then run:
+$rg = "brandrg"
 
 az deployment group create --resource-group $rg --template-file ./setup.json
 
