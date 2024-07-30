@@ -38,25 +38,25 @@
     "spokeAppPortalName": "[toLower(concat(substring(uniqueString(resourceGroup().id), 0, 4), '-spoke-web-app'))]",
     "linuxFxVersion": "php|7.4",
     "appServicePlanSku": "S1",
-    "hubVNetName": "cake-hub-vnet-01",
+    "hubVNetName": "hub-vnet-01",
     "hubMainSubnetName": "hub-subnet-01",
     "hubBastionSubnetName": "AzureBastionSubnet",
     "hubVNetAddressPrefix": "10.60.0.0/16",
     "hubSubnetAddressPrefix": "10.60.0.0/24",
     "hubBastionSubnetAddressPrefix": "10.60.2.0/26",
-    "hubNsgName": "cake-hub-nsg-01",
-    "bastionName": "cake-hub-bastion",
-    "hubVmName": "cake-hub-vm-",
+    "hubNsgName": "hub-nsg-01",
+    "bastionName": "hub-bastion",
+    "hubVmName": "hub-vm-",
     "vmCount": 1,
     "vmSize": "standard_b2s",
     "hubAppServiceSubnetName": "hub-app-subnet",
     "hubAppServiceSubnetAddressPrefix": "10.60.1.0/24",
-    "spokeVNetName": "cake-spoke-vnet-01",
+    "spokeVNetName": "spoke-vnet-01",
     "spokeMainSubnetName": "spoke-subnet-01",
     "spokeVNetAddressPrefix": "10.120.0.0/16",
     "spokeSubnetAddressPrefix": "10.120.0.0/24",
-    "spokeNsgName": "cake-spoke-nsg-01",
-    "spokeVmName": "cake-spoke-vm-",
+    "spokeNsgName": "spoke-nsg-01",
+    "spokeVmName": "spoke-vm-",
     "spokeLocation": "eastus",
     "spokeAppServiceSubnetName": "spoke-app-subnet",
     "spokeAppServiceSubnetAddressPrefix": "10.120.1.0/24"
@@ -114,9 +114,9 @@
         },
         "storageProfile": {
           "imageReference": {
-            "publisher": "Canonical",
-            "offer": "UbuntuServer",
-            "sku": "18.04-LTS",
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2019-Datacenter",
             "version": "latest"
           },
           "osDisk": {
@@ -429,9 +429,9 @@
         },
         "storageProfile": {
           "imageReference": {
-            "publisher": "Canonical",
-            "offer": "UbuntuServer",
-            "sku": "18.04-LTS",
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2019-Datacenter",
             "version": "latest"
           },
           "osDisk": {
