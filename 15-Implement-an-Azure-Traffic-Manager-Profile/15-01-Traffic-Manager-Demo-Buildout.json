@@ -190,7 +190,7 @@
               "[resourceId('Microsoft.Web/sites', variables('hubAppPortalName'))]"
             ],
             "properties": {
-              "repoUrl": "https://github.com/amanouk/labs/tree/main/az-700/hub-static-site.git",
+              "repoUrl": "https://github.com/amanouk/hub-static-site.git",
               "branch": "main",
               "isManualIntegration": true
             }
@@ -348,7 +348,7 @@
               "[resourceId('Microsoft.Web/sites', variables('spokeAppPortalName'))]"
             ],
             "properties": {
-              "repoUrl": "https://github.com/amanouk/labs/tree/main/az-700/spoke-static-site.git",
+              "repoUrl": "https://github.com/amanouk/spoke-static-site.git",
               "branch": "main",
               "isManualIntegration": true
             }
