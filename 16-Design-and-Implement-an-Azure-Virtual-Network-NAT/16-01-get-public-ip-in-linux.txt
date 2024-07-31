@@ -1,0 +1,2 @@
+### use this command to get the IP of the Cloud Shell
+curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
