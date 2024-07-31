@@ -32,15 +32,15 @@
   "variables": {
     "customData": "[concat('#include\n', uri(parameters('_artifactsLocation'), concat('cloud-init.txt', parameters('_artifactsLocationSasToken'))))]",
     "location": "westus",
-    "hubVNetName": "cake-hub-vnet-01",
+    "hubVNetName": "hub-vnet-01",
     "hubMainSubnetName": "sub1",
     "hubBastionSubnetName": "AzureBastionSubnet",
     "hubVNetAddressPrefix": "10.60.0.0/16",
     "hubSubnetAddressPrefix": "10.60.0.0/24",
     "hubBastionSubnetAddressPrefix": "10.60.1.0/26",
-    "hubNsgName": "cake-hub-nsg-01",
-    "bastionName": "cake-hub-bastion",
-    "hubVmName": "cake-hub-vm-",
+    "hubNsgName": "hub-nsg-01",
+    "bastionName": "hub-bastion",
+    "hubVmName": "hub-vm-",
     "vmCount": 1,
     "vmSize": "standard_b2s"
   },
@@ -97,9 +97,9 @@
         },
         "storageProfile": {
           "imageReference": {
-            "publisher": "Canonical",
-            "offer": "UbuntuServer",
-            "sku": "18.04-LTS",
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2019-Datacenter",
             "version": "latest"
           },
           "osDisk": {
