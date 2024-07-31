@@ -2,7 +2,10 @@
 
 curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/16-Design-and-Implement-an-Azure-Virtual-Network-NAT/16-01-nat-deploy.json -o setup.json
 
-$rg = az group list --query '[].name' -o tsv
+# Create a Resource Group 
+az group create --name brandrg --location eastus
+
+#You can then run:
+$rg = "brandrg"
 
 az deployment group create --resource-group $rg --template-file ./setup.json
-
