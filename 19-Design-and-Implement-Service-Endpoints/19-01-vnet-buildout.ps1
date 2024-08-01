@@ -14,8 +14,11 @@
 ##### START - VARIABLES ######
 ##############################
 
+# Create a Resource Group 
+az group create --name brandrg --location eastus
+
 # Get resource group and set to variable $rg
-$rg = az group list --query '[].name' -o tsv
+$rg = "brandrg"
 
 # Assign location variable to playground resource group location
 $location = az group list --query '[].location' -o tsv
@@ -39,8 +42,8 @@ az storage account create --name $storagename --resource-group $rg --location $l
 
 # Create Virtual Network and subnets
 
-az network vnet create --name cake-hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name hub-subnet-a --subnet-prefix 10.0.1.0/24
+az network vnet create --name hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name hub-subnet-a --subnet-prefix 10.0.1.0/24
 
-az network vnet subnet create --name hub-subnet-b --resource-group $rg --vnet-name cake-hub-vnet --address-prefixes 10.0.2.0/24 
+az network vnet subnet create --name hub-subnet-b --resource-group $rg --vnet-name hub-vnet --address-prefixes 10.0.2.0/24 
 
 
