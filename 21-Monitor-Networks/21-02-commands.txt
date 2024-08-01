@@ -1,10 +1,11 @@
 # These commands will be used to setup demos and pull down scripts from GitHub - Copy/Paste the below commands into Cloud Shell PowerShell Environment
 
-curl https://raw.githubusercontent.com/linuxacademy/content-az700-Microsoft-Azure-Network-Engineer-Associate/main/21-Monitor-Networks/21-02-traffic-analytics-demo-deploy.json -o setup.json
+curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/21-Monitor-Networks/21-02-traffic-analytics-demo-deploy.json -o setup.json
 
-$rg = Read-Host "Enter Resource Group Name: "
+# Create a Resource Group 
+az group create --name brandrg --location eastus
 
-Write-Host "Provided Resource Group for Deployment: $rg"
+#You can then run:
+$rg = "brandrg"
 
 az deployment group create --resource-group $rg --template-file ./setup.json
-
