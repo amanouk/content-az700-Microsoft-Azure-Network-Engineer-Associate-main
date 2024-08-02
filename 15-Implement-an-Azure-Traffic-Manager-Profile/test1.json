@@ -1,0 +1,42 @@
+{
+    "name": "vnet-2",
+    "id": "/subscriptions/7725f780-20b3-4f31-9d46-05ed38c3cc29/resourceGroups/brandrg/providers/Microsoft.Network/virtualNetworks/vnet",
+    "etag": "W/\"4a278162-b226-4359-b690-75e5121a9e56\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "westus",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "41838964-6a45-4d3d-b131-7e54d9e6c236",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.1.0.0/16"
+            ],
+            "ipamPoolPrefixAllocations": []
+        },
+        "encryption": {
+            "enabled": false,
+            "enforcement": "AllowUnencrypted"
+        },
+        "subnets": [
+            {
+                "name": "subnet1",
+                "id": "/subscriptions/7725f780-20b3-4f31-9d46-05ed38c3cc29/resourceGroups/brandrg/providers/Microsoft.Network/virtualNetworks/vnet/subnets/default",
+                "etag": "W/\"4a278162-b226-4359-b690-75e5121a9e56\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.1.0.0/24"
+                    ],
+                    "ipamPoolPrefixAllocations": [],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ],
+        "virtualNetworkPeerings": [],
+        "enableDdosProtection": false
+    }
+}
