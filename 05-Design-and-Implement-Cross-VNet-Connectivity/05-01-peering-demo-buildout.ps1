@@ -45,7 +45,7 @@ az vm create --resource-group $rg --name spoke-1-vm --image Ubuntu2204 --admin-u
 
 az vm create --resource-group $rg --name spoke-2-vm --image Ubuntu2204 --admin-username "azureuser" --admin-password "Brandadmin@123" --public-ip-address myPublicIP-spoke-2-vm --public-ip-sku Standard --vnet-name brand-spoke2-vnet --subnet spoke-2-subnet-a --size Standard_B1s --no-wait
 
-az vm create --resource-group $rg --name hub-nva-vm --image Ubuntu2204 --generate-ssh-keys --public-ip-address myPublicIP-nva --public-ip-sku Standard --vnet-name brand-hub-vnet --subnet nva-subnet --size Standard_B1s
+az vm create --resource-group $rg --name hub-nva-vm --image Ubuntu2204 --admin-username "azureuser" --admin-password "Brandadmin@123" --public-ip-address myPublicIP-nva --public-ip-sku Standard --vnet-name brand-hub-vnet --subnet nva-subnet --size Standard_B1s
 
 # Update the NVA VM to enable IP forwarding. This needs to be enabled on both the VM NIC and within the OS
 # via extension.
