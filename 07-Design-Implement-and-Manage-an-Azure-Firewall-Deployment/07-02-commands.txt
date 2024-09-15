@@ -5,6 +5,6 @@ curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Net
 # Create a Resource Group 
 az group create --name brandrg2 --location eastus
 
-$rg = "brandrg"
+$rg2 = "brandrg2"
 az deployment group create --resource-group $rg --template-file azuredeploy2.json
 
