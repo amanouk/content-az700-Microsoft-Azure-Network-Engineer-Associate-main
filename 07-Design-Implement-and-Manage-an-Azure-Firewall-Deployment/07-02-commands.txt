@@ -3,7 +3,7 @@
 curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/07-Design-Implement-and-Manage-an-Azure-Firewall-Deployment/07-02-fwc-deploy.json -o azuredeploy.json
 
 # Create a Resource Group 
-az group create --name brandrg --location eastus
+az group create --name brandrg2 --location eastus
 
 $rg = "brandrg"
 az deployment group create --resource-group $rg --template-file azuredeploy.json
