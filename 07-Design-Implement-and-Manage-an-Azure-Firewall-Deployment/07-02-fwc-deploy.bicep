@@ -6,23 +6,23 @@ param adminUsername string
 param adminPassword string
 
 var location = resourceGroup().location
-var hubVNetName = 'brand-hub-vnet-01'
+var hubVNetName = 'br2-hub-vnet-01'
 var hubVNetMainSubnetName = 'hub-subnet-01'
 var hubVNetPrefix = '10.60.0.0/16'
 var hubVNetMainSubnetPrefix = '10.60.0.0/24'
-var bastionName = 'brand-bastion-01'
-var bastionPublicIpName = 'brand-bastion-public-ip-01'
+var bastionName = 'br2-bastion-01'
+var bastionPublicIpName = 'br2-bastion-public-ip-01'
 var bastionSubnetName = 'AzureBastionSubnet'
 var bastionSubnetPrefix = '10.60.1.0/27'
 var firewallManagementSubnetName = 'AzureFirewallManagementSubnet'
 var firewallManagementSubnetPrefix = '10.60.3.0/26'
 var firewallSubnetName = 'AzureFirewallSubnet'
 var firewallSubnetPrefix = '10.60.2.0/26'
-var spokeVNetName = 'brand-spoke-vnet-01'
-var spokeVNetMainSubnetName = 'spoke-subnet-01'
+var spokeVNetName = 'br2-spoke2-vnet-01'
+var spokeVNetMainSubnetName = 'spoke2-subnet-01'
 var spokeVNetPrefix = '10.120.0.0/16'
 var spokeVNetMainSubnetPrefix = '10.120.0.0/24'
-var fwName = 'brand-hub-fw'
+var fwName = 'br2-hub-fw'
 var fwPIPPrefix = 'hub-fw-pip-'
 var numOfFwPIPAddresses = 1
 var azureFirewallSubnetId = resourceId(
@@ -31,9 +31,9 @@ var azureFirewallSubnetId = resourceId(
   firewallSubnetName
 )
 var azureFirewallSubnetJSON = json('{"id": "${azureFirewallSubnetId}"}')
-var hubVmName = 'brand-hub-vm-01'
+var hubVmName = 'br2-hub-vm-01'
 var vmSize = 'standard_b2s'
-var spokeVmName = 'brand-spoke-vm-01'
+var spokeVmName = 'br2-spoke2-vm-01'
 var dnsServer = '8.8.8.8'
 var azureFirewallIpConfigurations = [
   for i in range(0, numOfFwPIPAddresses): {
