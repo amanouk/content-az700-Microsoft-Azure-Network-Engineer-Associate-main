@@ -15,7 +15,7 @@
 ##############################
 
 # Create a Resource Group 
-az group create --name brandrg --location eastus
+az group create --name brandrg1 --location westus
 
 # Get resource group and set to variable $rg
 $rg = "brandrg"
