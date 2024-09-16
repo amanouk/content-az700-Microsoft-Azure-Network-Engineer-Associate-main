@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
@@ -23,23 +24,23 @@
     "routePrefix": "0.0.0.0/0",
     "routeNextHopType": "VirtualAppliance",
     "routeNextHopIpAddress": "10.60.2.4",
-    "hubVNetName": "brand-hub-vnet-01",
+    "hubVNetName": "br-hub-vnet-01",
     "hubVNetMainSubnetName": "hub-subnet-01",
     "hubVNetPrefix": "10.60.0.0/16",
     "hubVNetMainSubnetPrefix": "10.60.0.0/24",
-    "bastionName": "brand-bastion-01",
-    "bastionPublicIpName": "brand-bastion-public-ip-01",
+    "bastionName": "br-bastion-01",
+    "bastionPublicIpName": "br-bastion-public-ip-01",
     "bastionSubnetName": "AzureBastionSubnet",
     "bastionSubnetPrefix": "10.60.1.0/27",
     "firewallManagementSubnetName": "AzureFirewallManagementSubnet",
     "firewallManagementSubnetPrefix": "10.60.3.0/26",
     "firewallSubnetName": "AzureFirewallSubnet",
     "firewallSubnetPrefix": "10.60.2.0/26",
-    "spokeVNetName": "brand-spoke-vnet-01",
+    "spokeVNetName": "br-spoke-vnet-01",
     "spokeVNetMainSubnetName": "spoke-subnet-01",
     "spokeVNetPrefix": "10.120.0.0/16",
     "spokeVNetMainSubnetPrefix": "10.120.0.0/24",
-    "fwName": "brand-hub-fw",
+    "fwName": "br-hub-fw",
     "fwPIPPrefix": "hub-fw-pip-01",
     "numOfFwPIPAddresses": 1,
     "azureFirewallSubnetId": "[resourceId('Microsoft.Network/virtualNetworks/subnets',variables('hubVNetName'), variables('firewallSubnetName'))]",
@@ -62,9 +63,9 @@
     "mainSubnetsIPGroupName": "main-subnets-ip-group",
     "googleDNSServersIPGroupName": "google-dns-servers-ip-group",
     "googleDNSServers": "8.8.8.8",
-    "hubVmName": "brand-hub-vm-01",
+    "hubVmName": "br-hub-vm-01",
     "vmSize": "standard_b2s",
-    "spokeVmName": "brand-spoke-vm-01"
+    "spokeVmName": "br-spoke-vm-01"
   },
   "resources": [
     {
