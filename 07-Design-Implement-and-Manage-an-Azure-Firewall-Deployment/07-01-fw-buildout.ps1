@@ -14,8 +14,11 @@
 ##### START - VARIABLES ######
 ##############################
 
+# Create a Resource Group 
+az group create --name brandrg --location eastus
+
 # Get resource group and set to variable $rg
-$rg = az group list --query '[].name' -o tsv
+$rg = "brandrg"
 
 # Assign location variable to playground resource group location
 $location = az group list --query '[].location' -o tsv
