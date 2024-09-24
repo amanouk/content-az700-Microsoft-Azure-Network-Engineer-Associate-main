@@ -36,7 +36,7 @@
     "webAppPortalName": "hub-web-app",
     "linuxFxVersion": "php|7.4",
     "appServicePlanSku": "S1",
-    "hubVNetName": "brand-hub-vnet-01",
+    "hubVNetName": "br-hub-vnet-01",
     "hubMainSubnetName": "hub-subnet-01",
     "hubBastionSubnetName": "AzureBastionSubnet",
     "hubVNetAddressPrefix": "10.60.0.0/16",
