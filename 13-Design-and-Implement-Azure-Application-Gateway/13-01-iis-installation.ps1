@@ -1,6 +1,6 @@
 Set-AzVMExtension -ResourceGroupName $rg `
     -ExtensionName "IIS" `
-    -VMName "brand-hub-vm-01" `
+    -VMName "br-hub-vm-01" `
     -Location "CentralUS" `
     -Publisher Microsoft.Compute `
     -ExtensionType CustomScriptExtension `
