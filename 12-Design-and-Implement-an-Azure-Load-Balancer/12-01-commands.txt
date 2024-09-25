@@ -11,6 +11,6 @@ $rg = "brandrg"
 az deployment group create --resource-group $rg --template-file ./setup.json
 
 #Run 12-01-iis-installation.ps1 for each vm to configure IIS
-curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/12-Design-and-Implement-an-Azure-Load-Balancer/12-01-iis-installation.ps1.ps1 -o setup.ps1
+curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/12-Design-and-Implement-an-Azure-Load-Balancer/12-01-iis-installation.ps1 -o setup.ps1
 
 . ./setup.ps1
