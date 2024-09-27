@@ -11,7 +11,7 @@ Set-AzVMExtension -ResourceGroupName $rg `
 Set-AzVMExtension -ResourceGroupName $rg `
     -ExtensionName "IIS" `
     -VMName "spoke-vm-01" `
-    -Location "EastUS" `
+    -Location "centralus" `
     -Publisher Microsoft.Compute `
     -ExtensionType CustomScriptExtension `
     -TypeHandlerVersion 1.8 `
