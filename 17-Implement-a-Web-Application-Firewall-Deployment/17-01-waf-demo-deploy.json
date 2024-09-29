@@ -49,7 +49,7 @@
     "spokeSubnetAddressPrefix": "10.120.0.0/24",
     "spokeNsgName": "spoke-nsg-01",
     "spokeVmName": "spoke-vm-",
-    "spokeLocation": "eastus",
+    "spokeLocation": "centralus",
     "hubAppGwSubnetName": "AppGwSubnet",
     "hubAppGwSubnetAddressPrefix": "10.60.2.0/24",
     "hubAppGwName": "hub-appgw",
