@@ -3,7 +3,7 @@
 curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/17-Implement-a-Web-Application-Firewall-Deployment/17-01-waf-demo-deploy.json -o setup.json
 
 # Create a Resource Group 
-az group create --name brandrg --location eastus
+az group create --name brandrg --location centralus
 
 #You can then run:
 $rg = "brandrg"
