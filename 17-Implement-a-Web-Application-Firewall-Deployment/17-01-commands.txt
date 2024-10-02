@@ -9,3 +9,8 @@ az group create --name brandrg --location centralus
 $rg = "brandrg"
 
 az deployment group create --resource-group $rg --template-file ./setup.json
+
+#after completion to install IIS on VMs
+curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/17-Implement-a-Web-Application-Firewall-Deployment/17-01-iis-installation.ps1 -o setup.ps1
+
+. ./setup.ps1
