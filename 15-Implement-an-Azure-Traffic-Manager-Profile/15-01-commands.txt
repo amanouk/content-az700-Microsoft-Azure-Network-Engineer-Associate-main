@@ -2,6 +2,11 @@
 
 curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/15-Implement-an-Azure-Traffic-Manager-Profile/15-01-Traffic-Manager-Demo-Buildout.json -o setup.json
 
+#Edit setup.json file using Cloud Shell editor {}
+Line 9  🡪 "hubAppPortalName": "hub-web-app-[initials]"
+Line11 🡪 "spokeAppPortalName": "spoke-web-app-[initials]"
+
+
 # Create a Resource Group 
 az group create --name brandrg --location centralus
 
