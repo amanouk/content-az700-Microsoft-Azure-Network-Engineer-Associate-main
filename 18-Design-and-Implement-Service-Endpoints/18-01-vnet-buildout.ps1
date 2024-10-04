@@ -46,4 +46,6 @@ az network vnet create --name hub-vnet --resource-group $rg --location $location
 
 az network vnet subnet create --name hub-subnet-b --resource-group $rg --vnet-name hub-vnet --address-prefixes 10.0.2.0/24 
 
+# Create a Virtual Machine
 
+az vm create --resource-group $rg --name vm-1 --image Win2019Datacenter --admin-username "azureuser" --admin-password "Brandadmin@123" --public-ip-address myPublicIP-vm1 --public-ip-sku Standard --vnet-name hub-vnet --subnet hub-subnet-a --size Standard_B1s
