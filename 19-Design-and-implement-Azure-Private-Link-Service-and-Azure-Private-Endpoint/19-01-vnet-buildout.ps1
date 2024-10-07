@@ -57,3 +57,6 @@ az network lb probe create --resource-group $rg --lb-name provider-Loadbalancer 
 
 az network lb rule create --resource-group $rg --lb-name provider-Loadbalancer --name myHTTPRule --protocol tcp --frontend-port 80 --backend-port 80 --frontend-ip-name myFrontEnd --backend-pool-name myBackEndPool --probe-name myHealthProbe --idle-timeout 15 --enable-tcp-reset true
 
+# Create a VM to connect to Storage account
+az vm create --resource-group $rg --name vm-1 --image Win2019Datacenter --admin-username "azureuser" --admin-password "Brandadmin@123" --public-ip-address myPublicIP-vm1 --public-ip-sku Standard --vnet-name consumer-vnet --subnet consumer-subnet --size Standard_B1s
+
