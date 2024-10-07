@@ -48,4 +48,4 @@ az network vnet subnet create --name hub-subnet-b --resource-group $rg --vnet-na
 
 # Create a Virtual Machine
 
-az vm create --resource-group $rg --name vm-1 --image Ubuntu2024 --admin-username "azureuser" --admin-password "Brandadmin@123" --public-ip-address myPublicIP-vm1 --public-ip-sku Standard --vnet-name hub-vnet --subnet hub-subnet-a --size Standard_B1s
+az vm create --resource-group $rg --name vm-1 --image Ubuntu2204 --admin-username "azureuser" --admin-password "Brandadmin@123" --public-ip-address myPublicIP-vm1 --public-ip-sku Standard --vnet-name hub-vnet --subnet hub-subnet-a --size Standard_B1s
