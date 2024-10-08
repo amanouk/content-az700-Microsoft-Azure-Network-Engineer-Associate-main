@@ -8,8 +8,10 @@ az group create --name brandrg3 --location centralus
 #You can then run:
 $rg3 = "brandrg3"
 
-az deployment group create --resource-group $rg3 --template-file ./setup.json
+az deployment group create --resource-group $rg3 --template-file ./setup3.json
 
 # Install the IIS Server by running the folowing command
 
-curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/21-Monitor-Networks/
+curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/21-Monitor-Networks/21-03-iis-installation.ps1 -0 setup3.ps1
+
+. ./setup3.ps1
