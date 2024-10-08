@@ -3,9 +3,9 @@
 curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/21-Monitor-Networks/21-04-azure-monitor-demo-deploy.json -o setup.json
 
 # Create a Resource Group 
-az group create --name brandrg --location eastus
+az group create --name brandrg --location westus
 
 #You can then run:
-$rg = "brandrg"
+$rg4 = "brandrg4"
 
-az deployment group create --resource-group $rg --template-file ./setup.json
+az deployment group create --resource-group $rg4 --template-file ./setup.json
