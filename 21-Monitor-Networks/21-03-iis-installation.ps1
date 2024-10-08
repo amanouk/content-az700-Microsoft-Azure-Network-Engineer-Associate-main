@@ -1,4 +1,4 @@
-Set-AzVMExtension -ResourceGroupName $rg `
+Set-AzVMExtension -ResourceGroupName $rg3 `
     -ExtensionName "IIS" `
     -VMName "hub-vm-01" `
     -Location "WestUS" `
@@ -8,10 +8,10 @@ Set-AzVMExtension -ResourceGroupName $rg `
     -SettingString '{"commandToExecute":"powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"}'
 
 
-Set-AzVMExtension -ResourceGroupName $rg `
+Set-AzVMExtension -ResourceGroupName $rg3 `
     -ExtensionName "IIS" `
     -VMName "spoke-vm-01" `
-    -Location "EastUS" `
+    -Location "CentralUS" `
     -Publisher Microsoft.Compute `
     -ExtensionType CustomScriptExtension `
     -TypeHandlerVersion 1.8 `
