@@ -6,6 +6,6 @@ curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Net
 az group create --name brandrg3 --location centralus
 
 #You can then run:
-$rg = "brandrg3"
+$rg3 = "brandrg3"
 
-az deployment group create --resource-group $rg --template-file ./setup.json
+az deployment group create --resource-group $rg3 --template-file ./setup.json
