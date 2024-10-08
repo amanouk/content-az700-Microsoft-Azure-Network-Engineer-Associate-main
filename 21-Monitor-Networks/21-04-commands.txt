@@ -8,4 +8,4 @@ az group create --name brandrg --location westus
 #You can then run:
 $rg4 = "brandrg4"
 
-az deployment group create --resource-group $rg4 --template-file ./setup.json
+az deployment group create --resource-group $rg4 --template-file ./setup4.json
