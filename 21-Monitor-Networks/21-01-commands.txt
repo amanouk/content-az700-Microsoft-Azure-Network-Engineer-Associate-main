@@ -8,4 +8,4 @@ az group create --name brandrg --location centralus
 #You can then run:
 $rg1 = "brandrg1"
 
-az deployment group create --resource-group $rg1 --template-file ./setup.json
+az deployment group create --resource-group $rg1 --template-file ./setup1.json
