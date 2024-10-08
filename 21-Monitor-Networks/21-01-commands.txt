@@ -3,7 +3,7 @@
 curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/21-Monitor-Networks/21-01-network-watcher-demo-deploy.json -o setup1.json
 
 # Create a Resource Group 
-az group create --name brandrg --location centralus
+az group create --name brandrg1 --location centralus
 
 #You can then run:
 $rg1 = "brandrg1"
