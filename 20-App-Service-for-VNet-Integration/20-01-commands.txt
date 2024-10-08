@@ -1,0 +1,16 @@
+# These commands will be used to setup demos and pull down scripts from GitHub - Copy/Paste the below commands into Cloud Shell PowerShell Environment
+
+curl https://raw.githubusercontent.com/amanouk/content-az700-Microsoft-Azure-Network-Engineer-Associate-main/master/20-App-Service-for-VNet-Integration/20-01-webapp-buildout.json -o setup.json
+
+#Edit setup.json file using Cloud Shell editor {}
+Line 9  🡪 "hubAppPortalName": "hub-web-app-[initials]"
+Line11 🡪 "spokeAppPortalName": "spoke-web-app-[initials]"
+
+
+# Create a Resource Group 
+az group create --name brandrg --location centralus
+
+#You can then run:
+$rg = "brandrg"
+
+az deployment group create --resource-group $rg --template-file ./setup.json
