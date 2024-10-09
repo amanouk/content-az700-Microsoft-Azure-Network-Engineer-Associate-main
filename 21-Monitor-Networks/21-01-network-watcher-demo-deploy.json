@@ -58,7 +58,7 @@
     "hubAppGwPublicIpName": "hub-appgw-pip",
     "spokeAppGwName": "spoke-appgw",
     "spokeAppGwPublicIpName": "spoke-appgw-pip",
-    "diagStorageAccountName": "[concat('brand', substring(uniqueString(resourceGroup().id), 0, 8))]",
+    "diagStorageAccountName": "[concat('brand1', substring(uniqueString(resourceGroup().id), 0, 8))]",
     "diagWorkspaceName": "[concat('brand1-', substring(uniqueString(resourceGroup().id), 0, 8))]",
     "diagSettingsName": "wafdiagsettings",
     "diagStorageAccountId": "[resourceId('Microsoft.Storage/storageAccounts', variables('diagStorageAccountName'))]",
