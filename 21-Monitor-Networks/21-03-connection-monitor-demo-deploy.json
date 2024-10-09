@@ -893,7 +893,7 @@
       "properties": {
         "autoUpgradeMinorVersion": true,
         "publisher": "Microsoft.Azure.NetworkWatcher",
-        "type": "NetworkWatcherAgentLinux",
+        "type": "NetworkWatcherAgentWindows",
         "typeHandlerVersion": "1.4"
       }
     }
